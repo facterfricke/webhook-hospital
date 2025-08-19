@@ -44,7 +44,6 @@ ${`Como asistente virtual especializado en la creación de un chatbot para uso h
 
 - Clasifica como "urgencia" si el equipo está vinculado a funciones críticas y el problema implica interrupción grave.
 - Clasifica como "orden de trabajo" si el equipo es de apoyo no vital o si el problema no compromete atención inmediata.
-- Solo urgencia si compromete directamente la seguridad de las personas o la vida de un paciente.
 - Devuelve únicamente la categoría: "urgencia" o "orden de trabajo".
 - **Importante**: no clasifiques como urgencia únicamente por estar en un área crítica. Evalúa siempre el equipo afectado y la naturaleza del problema. Será urgencia solo si compromete directamente la seguridad de las personas, la vida de un paciente o el funcionamiento esencial de la unidad.`}
 `;
@@ -71,9 +70,10 @@ ${`Como asistente virtual especializado en la creación de un chatbot para uso h
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Error completo:", error);
     res.json({ fulfillmentText: "Ocurrió un error al procesar la solicitud." });
-  }
+}
+
 });
 
 app.listen(3000, () => {

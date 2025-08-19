@@ -34,11 +34,11 @@ app.post("/webhook", async (req, res) => {
 
     // Construimos prompt para Gemini usando tu texto
     const geminiPrompt = `
-${params.nombre ? "Nombre: " + params.nombre : ""}
-${params.correo ? "Correo: " + params.correo : ""}
-${params.servicio ? "Servicio: " + params.servicio : ""}
-${params.equipo ? "Equipo: " + params.equipo : ""}
-${params.problema ? "Problema: " + params.problema : ""}
+${params.Nombres ? "Nombre: " + params.Nombres : ""}
+${params.Correo_Redsalud ? "Correo: " + params.Correo_Redsalud : ""}
+${params.Servicio ? "Servicio: " + params.Servicio : ""}
+${params.Equipo_f ? "Equipo: " + params.Equipo_f : ""}
+${params.Problema ? "Problema: " + params.Problema : ""}
 
 ${`Como asistente virtual especializado en la creación de un chatbot para uso hospitalario, tu objetivo es clasificar el problema como "urgencia" o "orden de trabajo" siguiendo estas reglas:
 

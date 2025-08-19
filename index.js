@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 // Tu API Key de Gemini
-const GEMINI_API_KEY = "TU_API_KEY_AQUI";
+const GEMINI_API_KEY = "AIzaSyBlcjqnSX7ECJaeZzwKBLun2PsigMYZjSw";
 
 // Función que llama a Gemini
 async function classifyWithGemini(prompt) {
